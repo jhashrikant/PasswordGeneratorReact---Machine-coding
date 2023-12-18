@@ -1,0 +1,45 @@
+.Container {
+    background-color: #24232b;
+    padding: 24px;
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.passwordandcopycontainer,
+.chrcontainer,
+.InputStrengthContainer {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.optionscontainer {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: flex-start;
+    margin: 10px 0px;
+}
+
+.passWordContainer {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.GeneratepaswordBtn,
+.copybtn {
+    color: #fff;
+    background-color: green;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
