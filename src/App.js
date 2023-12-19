@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import styles from './styles/main.module.css'
-// import passwordStrengthIndicator from './passwordstrengthchecker';
+import styles from './styles/main.module.css';
 import PasswordstrengthIndicator from './components/PasswordstrengthIndicator';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
 		{ id: 3, label: 'Include Numbers', checked: false },
 		{ id: 4, label: 'Include symbols', checked: false },
 	]);
-	const [passwordStrength , setpasswordStrength] = useState('')
 
 	const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	const lowerCaseLetters = 'abcdefghijklmnopqrstuvqxyz';
@@ -67,7 +65,7 @@ function App() {
 		setcopied(true)
 		setTimeout(() => {
 			setcopied(false);
-		}, 2000);
+		}, 1500);
 	}
 
 
