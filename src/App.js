@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './styles/main.module.css'
+// import passwordStrengthIndicator from './passwordstrengthchecker';
+import PasswordstrengthIndicator from './components/PasswordstrengthIndicator';
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
 		{ id: 3, label: 'Include Numbers', checked: false },
 		{ id: 4, label: 'Include symbols', checked: false },
 	]);
+	const [passwordStrength , setpasswordStrength] = useState('')
 
 	const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	const lowerCaseLetters = 'abcdefghijklmnopqrstuvqxyz';
@@ -67,6 +70,7 @@ function App() {
 		}, 2000);
 	}
 
+
 	return (
 		<div className={styles.Container}>
 			{Password && <div className={styles.passwordandcopycontainer}>
@@ -89,10 +93,7 @@ function App() {
 
 			{errorMessage && <div style={{color:'white'}}>{errorMessage}</div>}
 
-			<div className={styles.InputStrengthContainer}>
-				<div className='strength'>Strength</div>
-				<div className='strengthValue'>Good</div>
-			</div>
+			<PasswordstrengthIndicator password={Password} />
 
 			<div className={styles.passWordContainer}><button onClick={() => generatePassword(CheckBoxdata, length)} className={styles.GeneratepaswordBtn}>Generate Password</button></div>
 		</div>
